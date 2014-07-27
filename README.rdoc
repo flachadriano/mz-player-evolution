@@ -1,11 +1,11 @@
-== Scope
+= Scope
 
-= Version 1
+== Version 1
 
 - Create/update players through text info
 - Show player improvements through de updates
 
-= Version 2
+== Version 2
 
 - Delete players
 - Update players manually
