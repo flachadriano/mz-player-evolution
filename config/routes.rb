@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :player_data
-
-  resources :players
 
   devise_for :users
+
+  resources :players
+  resources :import, only: [:index, :update]
 
   root 'players#index'
 end

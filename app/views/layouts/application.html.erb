@@ -9,9 +9,9 @@
 <body>
 
 <% if user_signed_in? %>
-	<p class=toolbar>
-		<button class=button>Import MZ Data</button>
-	</p>
+	<div class=toolbar>
+		<%= button_to 'Import MZ Data', import_index_path, class: 'button' %>
+	</div>
 <% end %>
 
 <p class=notice><%= notice %></p>
