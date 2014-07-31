@@ -11,7 +11,6 @@ class CreatePlayerData < ActiveRecord::Migration
       t.integer :play_intelligence, null: false
       t.integer :passing, null: false
       t.integer :shooting, null: false
-      t.integer :shooting, null: false
       t.integer :header, null: false
       t.integer :keeping, null: false
       t.integer :ball_control, null: false
