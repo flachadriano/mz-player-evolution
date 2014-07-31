@@ -1,7 +1,12 @@
 class ImportController < ApplicationController
-	def index
+	def new
 	end
 
-	def update
+	def import_data
+		if current_user.import(params[:data])
+			redirect_to players_path, notice: ''
+		else
+			redirect_to new_import_path, notice: ''
+		end
 	end
 end

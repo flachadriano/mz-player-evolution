@@ -1,4 +1,5 @@
 module ImportMzData
-	def import
+	def import data
+		return true
 	end
 end

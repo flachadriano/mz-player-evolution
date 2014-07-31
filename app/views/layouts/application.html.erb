@@ -10,7 +10,7 @@
 
 <% if user_signed_in? %>
 	<div class=toolbar>
-		<%= button_to 'Import MZ Data', import_index_path, class: 'button' %>
+		<%= button_to 'Import MZ Data', new_import_path, method: :get, class: 'button' %>
 	</div>
 <% end %>
 
