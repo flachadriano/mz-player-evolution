@@ -1,5 +1,7 @@
-<%= form_tag '/import/import_data', method: :put do %>
-	<%= text_area_tag :data, nil, rows: 20, cols: 100 %>
-	<br/>
-	<%= submit_tag 'Import Data', class: 'button submit' %>
-<% end %>
+<center>
+	<%= form_tag '/import/import_data', method: :put do %>
+		<%= text_area_tag :data, nil, rows: 20, cols: 100 %>
+		<br/>
+		<%= submit_tag 'Import Data', class: 'button submit' %>
+	<% end %>
+</center>
