@@ -1,14 +1,23 @@
-<p id="notice"><%= notice %></p>
+<table style="width:100%; margin:0">
+	<tr>
 
-<p>
-  <strong>Number:</strong>
-  <%= @player.number %>
-</p>
+		<td><%= render 'index' %></td>
 
-<p>
-  <strong>Name:</strong>
-  <%= @player.name %>
-</p>
+		<td valign="top" style="width: 100%; height: 100%; padding: 2em">
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+			<div class=player>
+				<%= @player.number %> - <%= @player.name %>
+
+				<br/>
+				<br/>
+
+				<% [:speed, :stamina, :play_intelligence, :passing, :shooting, :header, :keeping, 
+					:ball_control, :tackling, :cross_balls, :set_plays, :experience, :form].each do |attr| %>
+					<strong><%= attr %>: </strong><%= @player.attributes.send(attr) %><br/><br/>
+				<% end %>
+			</div>
+
+		</td>
+
+	</tr>
+</table>
