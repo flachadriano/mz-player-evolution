@@ -7,9 +7,18 @@
 .player {
 	background-color: #006633;
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 2em;
 	padding: 1em;
 	width: 100%;
+}
+
+.player-attribute {
+	td {
+		color: #000;
+		font-size: 0.8em;
+		line-height: 1.2em;
+		padding: 0.2em;
+	}
 }
 
 .players {

@@ -11,10 +11,25 @@
 				<br/>
 				<br/>
 
-				<% [:speed, :stamina, :play_intelligence, :passing, :shooting, :header, :keeping, 
-					:ball_control, :tackling, :cross_balls, :set_plays, :experience, :form].each do |attr| %>
-					<strong><%= attr %>: </strong><%= @player.attributes.send(attr) %><br/><br/>
-				<% end %>
+				<table style="background-color: #CCC; padding: 0.5em">
+						<% [:speed, :stamina, :play_intelligence, :passing, :shooting, :header, :keeping, 
+							:ball_control, :tackling, :cross_balls, :set_plays, :experience, :form].each do |attr| %>
+							<tr class=player-attribute>
+								<td>
+									<%= attr %>
+								</td>
+								<td>
+									<% (0..@player.attributes.send(attr)).each do || %>
+										<%= image_tag 'skill.png' %>
+									<% end %>
+								</td>
+								<td>
+									(<%= @player.attributes.send(attr) %>)
+								</td>
+							</tr>
+						<% end %>
+				</table>
+
 			</div>
 
 		</td>
