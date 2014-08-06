@@ -4,6 +4,10 @@
 	padding: 1em;
 }
 
+.button-submit {
+	background: #AAA;
+}
+
 .player {
 	background-color: #006633;
 	color: #fff;
@@ -22,25 +26,16 @@
 }
 
 .players {
-	width: 40em;
-}
-
-.submit {
-	background: #aaa;
-}
-
-.players {
 	background: #006633;
 	border-bottom-right-radius: 2em;
 	border-top-right-radius: 2em;
-	color: #eee;
+	color: #EEE;
 	padding: 0.5em;
 
 	a {
-		color: #fff;
+		color: #FFF;
 		&:hover {
-			color: #ccc;
-			background-color: #006633;
+			color: #CCC;
 		}
 	}
 }
@@ -49,4 +44,11 @@
 	background: #006633;
 	margin: 0;
 	padding: 2em;
+
+	a {
+		color: #000;
+		&:hover {
+			background-color: #33C77D;
+		}
+	}
 }

@@ -1,38 +1,28 @@
-<table style="width:100%; margin:0">
-	<tr>
+<div style="display: inline-flex; width: 100%">
 
-		<td><%= render 'index' %></td>
+	<%= render 'index' %>
 
-		<td valign="top" style="width: 100%; height: 100%; padding: 2em">
+	<div style="padding: 1em">
 
-			<div class=player>
-				<%= @player.number %> - <%= @player.name %>
+		<table style="background-color: #CCC; padding: 0.5em">
+				<% [:speed, :stamina, :play_intelligence, :passing, :shooting, :header, :keeping, 
+					:ball_control, :tackling, :cross_balls, :set_plays, :experience, :form].each do |attr| %>
+					<tr class=player-attribute>
+						<td>
+							<%= attr %>
+						</td>
+						<td>
+							<% (0..@player.attributes.send(attr)).each do || %>
+								<%= image_tag 'skill.png' %>
+							<% end %>
+						</td>
+						<td>
+							(<%= @player.attributes.send(attr) %>)
+						</td>
+					</tr>
+				<% end %>
+		</table>
 
-				<br/>
-				<br/>
+	</div>
 
-				<table style="background-color: #CCC; padding: 0.5em">
-						<% [:speed, :stamina, :play_intelligence, :passing, :shooting, :header, :keeping, 
-							:ball_control, :tackling, :cross_balls, :set_plays, :experience, :form].each do |attr| %>
-							<tr class=player-attribute>
-								<td>
-									<%= attr %>
-								</td>
-								<td>
-									<% (0..@player.attributes.send(attr)).each do || %>
-										<%= image_tag 'skill.png' %>
-									<% end %>
-								</td>
-								<td>
-									(<%= @player.attributes.send(attr) %>)
-								</td>
-							</tr>
-						<% end %>
-				</table>
-
-			</div>
-
-		</td>
-
-	</tr>
-</table>
+</div>
