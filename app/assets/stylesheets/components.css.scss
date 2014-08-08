@@ -48,3 +48,18 @@
 		}
 	}
 }
+
+.update-box {
+	display: table;
+	margin: auto;
+	vertical-align: middle;
+
+	label {
+		vertical-align: middle;
+	}
+
+	select {
+		background-color: #FFF;
+		height: 3em;
+	}
+}

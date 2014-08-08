@@ -1,5 +1,8 @@
 <center>
 	<%= form_tag '/import/import_data', method: :put do %>
+		<%= label_tag 'Name' %>
+		<%= text_field_tag :name %>
+		<br/>
 		<%= text_area_tag :data, nil, rows: 20, cols: 100 %>
 		<br/>
 		<%= submit_tag 'Import Data', class: 'button button-submit' %>

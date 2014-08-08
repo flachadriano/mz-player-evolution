@@ -3,6 +3,8 @@ class PlayerData < ActiveRecord::Base
 
 	validates :player, presence: true
 
+	validates :name, length: {maximum: 255}
+
 	validates :value, :salary, :age, :session,
 		numericality: {greather_than_or_equal_to: 0, less_than: 2 ** 32, only_integer: true}
 

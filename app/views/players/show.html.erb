@@ -12,7 +12,6 @@
 			<br/>
 
 			<table>
-
 				<tr>
 					<td>Value: <%= number_to_currency(@player.attributes.value) %></td>
 					<td>Salary: <%= number_to_currency(@player.attributes.salary) %></td>
@@ -21,13 +20,17 @@
 					<td>Age: <%= @player.attributes.age %></td>
 					<td>Session: <%= @player.attributes.session %></td>
 				</tr>
-
 			</table>
 
 			<br/>
+			<div class=update-box>
+				<%= select_tag :name, options_for_select(@player.updates, @player.updates.last) %>
+				<%= label_tag '> Compare with >' %>
+				<%= select_tag :name, options_for_select(@player.updates) %>
+			</div>
+			<br/>
 
 			<table>
-
 				<% [:speed, :stamina, :play_intelligence, :passing, :shooting, :header, :keeping, :ball_control, 
 					:tackling, :cross_balls, :set_plays, :experience, :form].each do |attr| %>
 					<tr>
@@ -46,7 +49,6 @@
 						<td>(<%= @player.attributes.send(attr) %>)</td>
 					</tr>
 				<% end %>
-
 			</table>
 
 		</div>

@@ -1,5 +1,5 @@
 module ImportMzData
-	def import data
+	def import name, data
 		data.split("\r\n").each do |player_data|
 			attributes_data = player_data.split("\t")
 
@@ -10,6 +10,8 @@ module ImportMzData
 
 			player.number	= attributes_data[0]
 			player.name		= attributes_data[1]
+
+			attributes.name		= name
 
 			attributes.value	= attributes_data[2].gsub(' ', '').to_i
 			attributes.salary	= attributes_data[3].gsub(' ', '').to_i

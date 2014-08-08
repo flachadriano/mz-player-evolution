@@ -3,7 +3,7 @@ class ImportController < ApplicationController
 	end
 
 	def import_data
-		if current_user.import(params[:data])
+		if current_user.import(params[:name], params[:data])
 			redirect_to players_path, notice: ''
 		else
 			redirect_to new_import_path, notice: ''
