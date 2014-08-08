@@ -13,14 +13,35 @@
 
 			<table>
 
+				<tr>
+					<td>Value: <%= number_to_currency(@player.attributes.value) %></td>
+					<td>Salary: <%= number_to_currency(@player.attributes.salary) %></td>
+				</tr>
+				<tr>
+					<td>Age: <%= @player.attributes.age %></td>
+					<td>Session: <%= @player.attributes.session %></td>
+				</tr>
+
+			</table>
+
+			<br/>
+
+			<table>
+
 				<% [:speed, :stamina, :play_intelligence, :passing, :shooting, :header, :keeping, :ball_control, 
 					:tackling, :cross_balls, :set_plays, :experience, :form].each do |attr| %>
 					<tr>
-						<td><%= I18n.t(attr) %></td>
 						<td>
-							<% (0..@player.attributes.send(attr)).each do || %>
+							<%= I18n.t(attr) %>
+							<%= image_tag 'space.png' %>
+						</td>
+						<td>
+							<% (1..@player.attributes.send(attr)).each do || %>
 								<%= image_tag 'skill.png' %>
 							<% end %>
+							<% (@player.attributes.send(attr)..10).each do || %>
+								<%= image_tag 'space.png' %>
+							<% end if attr == :speed %>
 						</td>
 						<td>(<%= @player.attributes.send(attr) %>)</td>
 					</tr>
