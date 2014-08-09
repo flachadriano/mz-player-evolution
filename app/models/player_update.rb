@@ -1,4 +1,4 @@
-class PlayerData < ActiveRecord::Base
+class PlayerUpdate < ActiveRecord::Base
 	belongs_to :player
 
 	validates :player, presence: true

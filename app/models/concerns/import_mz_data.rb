@@ -6,7 +6,7 @@ module ImportMzData
 			player		= self.players.find_by(number: attributes_data[0], name: attributes_data[1])
 			player	  ||= self.players.find_by(name: attributes_data[1])
 			player	  ||= self.players.build
-			attributes	= player.player_data.build
+			attributes	= player.player_updates.build
 
 			player.number	= attributes_data[0]
 			player.name		= attributes_data[1]

@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140808014248) do
 
-  create_table "player_data", force: true do |t|
+  create_table "player_updates", force: true do |t|
     t.integer  "player_id",         null: false
     t.integer  "value",             null: false
     t.integer  "salary",            null: false

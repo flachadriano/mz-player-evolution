@@ -1,6 +1,6 @@
-class CreatePlayerData < ActiveRecord::Migration
+class CreatePlayerUpdates < ActiveRecord::Migration
   def change
-    create_table :player_data do |t|
+    create_table :player_updates do |t|
       t.references :player, null: false
       t.integer :value, null: false
       t.integer :salary, null: false
