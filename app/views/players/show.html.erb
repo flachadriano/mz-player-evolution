@@ -26,7 +26,7 @@
 			<div class=update-box>
 				<%= select_tag :name, options_for_select(@player.updates, @player.updates.last) %>
 				<%= label_tag '> Compare with >' %>
-				<%= select_tag :name, options_for_select(@player.updates) %>
+				<%= select_tag :name, options_for_select(@player.updates, @player.updates.last) %>
 			</div>
 			<br/>
 
